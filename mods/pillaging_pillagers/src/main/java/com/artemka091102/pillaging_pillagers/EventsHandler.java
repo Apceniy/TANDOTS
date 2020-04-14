@@ -58,8 +58,6 @@ public class EventsHandler {
 		}
 		if (ticksUntilRaid == 1 && player instanceof ServerPlayerEntity) {
 			ServerPlayerEntity serverPlayer = (ServerPlayerEntity) player;
-			serverPlayer.sendMessage(new StringTextComponent("Рейд начался!")); // TODO убрать перед релизом!
-			//LOGGER.debug("Рейд начался!");
 			ServerWorld serverworld = serverPlayer.getServerWorld();
 			BlockPos playerPos = player.getPosition();
 			BlockPos outpostPos = serverworld.findNearestStructure("PILLAGER_OUTPOST", playerPos, 10000, false);
